@@ -19,11 +19,11 @@
 <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
 	$(function () { // same as $(document).ready(function () { })
   // assuming we have the open class set on the H2 when the HTML is delivered
-  $('LI.drawer H2:not(.open)').next().hide();
+  $('li.drawer H2:not(.open)').next().hide();
 
-  $('H2.drawer-handle').click(function () {
+  $('h1.drawer-handle').click(function () {
     // find the open drawer, remove the class, move to the UL following it and hide it
-    $('H2.open').removeClass('open').next().hide();
+    $('h2.open').removeClass('open').next().hide();
     
     // add the open class to this H2, move to the next element (the UL) and show it
     $(this).addClass('open').next().show();
